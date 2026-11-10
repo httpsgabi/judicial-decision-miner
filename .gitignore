@@ -1,6 +1,44 @@
-venv/
-__pycache__/
+
+# Environment variables and secrets
 .env
-.idea/
+.env.*
+!.env.example
+
+# Python virtual environment
+venv/
+.venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# PDF files
+*.pdf
+
+# Downloaded documents
+downloads/
+temp/
+tmp/
+
+# IDE and editor settings
 .vscode/
-*.pyc 
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook
+.ipynb_checkpoints/
