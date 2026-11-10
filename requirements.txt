@@ -1,7 +1,6 @@
 playwright
+pymongo
 fastapi
-sqlalchemy
-psycopg2
 pydantic
 python-dotenv
 pymupdf
