@@ -1,60 +1,63 @@
+
 # Judicial Decision Miner
 
-Automated system for collecting, processing and storing judicial decisions from Brazilian court systems such as PJe and e-SAJ.
+Automated system for collecting, processing, and storing judicial decisions from Brazilian court systems such as PJe and e-SAJ.
 
 ---
 
-# Overview
+## Overview
 
-This project aims to automate the collection, processing and storage of judicial decisions from Brazilian court systems.
+This project aims to automate the collection, processing, and storage of judicial decisions from Brazilian court systems.
 
-The system integrates web automation, PDF document processing and structured persistence mechanisms in order to facilitate extraction and analysis of judicial information.
+The system integrates web automation, PDF document processing, and structured data persistence to facilitate the extraction and analysis of judicial information.
 
-The architecture was designed using object-oriented principles and software design patterns, allowing scalability, modularity and easier maintenance.
+The architecture follows object-oriented principles and software design patterns, allowing scalability, modularity, and easier maintenance.
 
 ---
 
-# Main Features
+## Main Features
 
 - Automated navigation in judicial systems
 - Integration with PJe and e-SAJ
 - Automated PDF download
 - Judicial decision parsing
 - Decision filtering
-- Structured data persistence
+- Structured data extraction and persistence
+- Process and document management
 - Modular and extensible architecture
 
 ---
 
-# Technologies
+## Technologies
 
 | Technology | Purpose |
 |---|---|
 | Python | Main programming language |
 | Playwright | Web automation |
-| PostgreSQL | Database |
-| SQLAlchemy | ORM |
+| MongoDB | NoSQL database |
+| PyMongo | MongoDB integration |
 | PyMuPDF | PDF processing |
 | FastAPI | Backend/API |
 | Pydantic | Data validation |
 | Pytest | Automated testing |
+| python-dotenv | Environment variable management |
 
 ---
 
-# Project Structure
+## Project Structure
 
-```
-project/
+```text
+judicial-decision-miner/
 │
 ├── docs/
 ├── tests/
 ├── src/
-│   ├── controller/
+│   ├── controllers/
 │   ├── connectors/
 │   ├── factories/
 │   ├── models/
 │   ├── parser/
-│   ├── filter/
+│   ├── filters/
 │   ├── storage/
 │   ├── strategies/
 │   └── utils/
@@ -62,64 +65,55 @@ project/
 ├── requirements.txt
 ├── README.md
 ├── .env
+├── .env.example
 └── .gitignore
 ```
 
 ---
 
-# Environment Setup
+## Environment Setup
 
-## 1. Clone the repository
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/judicial-decision-miner.git
 ```
 
----
-
-## 2. Access the project directory
+### 2. Access the project directory
 
 ```bash
 cd judicial-decision-miner
 ```
 
----
+### 3. Create a virtual environment
 
-## 3. Create virtual environment
-
-### Windows
+**Windows:**
 
 ```bash
 python -m venv venv
 ```
 
----
+### 4. Activate the virtual environment
 
-## 4. Activate virtual environment
-
-### Windows
+**Windows:**
 
 ```bash
 venv\Scripts\activate
 ```
 
-### Linux / MacOS
+**Linux / macOS:**
 
 ```bash
 source venv/bin/activate
 ```
 
----
-
-## 5. Install dependencies
+### 5. Install dependencies
 
 ```bash
 python -m pip install -r requirements.txt
 ```
 
----
-
-## 6. Install Playwright browsers
+### 6. Install Playwright browsers
 
 ```bash
 python -m playwright install
@@ -127,35 +121,46 @@ python -m playwright install
 
 ---
 
-# Running the Project
+## Database Configuration
 
-Future implementation.
+The project uses MongoDB as its primary database.
+
+The application communicates with MongoDB through PyMongo.
+
+Database credentials and connection strings must be stored in environment variables and must not be committed to the repository.
 
 ---
 
-# Development Status
+## Running the Project
 
-🚧 Project under development.
+Under development.
+
+---
+
+## Development Status
+
+Project under development.
 
 Current phase:
+
 - Software architecture
 - UML modeling
 - Initial project structure
-- Connector implementation
+- MongoDB database modeling
+- Initial database integration
 
 ---
 
-# Future Improvements
+## Future Improvements
 
-- Elasticsearch integration
 - OCR support
-- AI-based decision analysis
+- AI-based judicial decision analysis
 - Parallel processing
 - Web dashboard
 - Multi-court scalability
 
 ---
 
-# License
+## License
 
 This project is intended for academic and educational purposes.
